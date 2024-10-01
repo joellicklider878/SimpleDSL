@@ -7,12 +7,12 @@ class SimpleDSLCompiler(SimpleDSLListener):
     def __init__(self):
         self.variables = {}
 
-    def enterStat(self, ctx: SimpleDSLParser.StatContext):
+    def enterAssignStatement(self, ctx: SimpleDSLParser.AssignStatementContext):
         var_name = ctx.ID().getText()
         value = self.evaluate(ctx.expr())
         self.variables[var_name] = value
 
-    def enterPrintStat(self, ctx: SimpleDSLParser.PrintStatContext):
+    def enterPrintStatement(self, ctx: SimpleDSLParser.PrintStatementContext):
         value = self.evaluate(ctx.expr())
         print(value)
 
