@@ -1,6 +1,6 @@
 # SimpleDSL
 
-SimpleDSL is a domain-specific language designed to simplify [describe the purpose of your DSL]. This README provides instructions for setting up and using SimpleDSL on Windows 10 with Python 3.
+SimpleDSL is a domain-specific language designed to simplify understanding. This README provides instructions for setting up and using SimpleDSL on Windows 10 with Python 3.
 
 ## Table of Contents
 - Prerequisites
