@@ -9,7 +9,7 @@ setup(
     description='A PyPI package with a Markdown README',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    name='markdown-description-example',
+    name='SimpleDSL',
     url='https://github.com/joellicklider878/SimpleDSL',
     version='1.0.1',
     packages=find_packages(),
