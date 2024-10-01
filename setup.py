@@ -4,14 +4,14 @@ with open('README.md') as f:
     long_description = f.read()
     
 setup(
-    author='Joel Licklider',
+    author='Joel Douglass Licklider',
     author_email='joellicklider@gmail.com',
     description='A PyPI package with a Markdown README',
     long_description=long_description,
     long_description_content_type='text/markdown',
     name='markdown-description-example',
     url='https://github.com/joellicklider878/SimpleDSL',
-    version='0.0.1',
+    version='1.0.1',
     packages=find_packages(),
     install_requires=[
         'antlr4-python3-runtime==4.9.2',
