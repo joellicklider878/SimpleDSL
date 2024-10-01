@@ -1,18 +1,13 @@
-from antlr4 import *
-from src import SimpleDSLLexer
-from src import SimpleDSLParser
-from src import SimpleDSLListener
-from SimpleDSLLexer import SimpleDSLLexer
-from SimpleDSLParser import SimpleDSLParser
-from SimpleDSLListener import SimpleDSLListener
-import SimpleClass
-import sys
+from antlr4 import FileStream, CommonTokenStream, ParseTreeWalker
+from src.SimpleDSLLexer import SimpleDSLLexer
+from src.SimpleDSLParser import SimpleDSLParser
+from src.SimpleDSLListener import SimpleDSLListener
 
 class SimpleDSLCompiler(SimpleDSLListener):
     def __init__(self):
         self.variables = {}
 
-    def enterAssignStat(self, ctx: SimpleDSLParser.AssignStatContext):
+    def enterStat(self, ctx: SimpleDSLParser.StatContext):
         var_name = ctx.ID().getText()
         value = self.evaluate(ctx.expr())
         self.variables[var_name] = value

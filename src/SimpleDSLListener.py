@@ -1,6 +1,6 @@
-# Generated from SimpleDSL.g4 by ANTLR 4.13.2
+# Generated from SimpleDSL.g4 by ANTLR 4.12.0
 from antlr4 import *
-if "." in __name__:
+if __name__ is not None and "." in __name__:
     from .SimpleDSLParser import SimpleDSLParser
 else:
     from SimpleDSLParser import SimpleDSLParser
@@ -17,57 +17,66 @@ class SimpleDSLListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by SimpleDSLParser#assignStat.
-    def enterAssignStat(self, ctx:SimpleDSLParser.AssignStatContext):
+    # Enter a parse tree produced by SimpleDSLParser#stat.
+    def enterStat(self, ctx:SimpleDSLParser.StatContext):
         pass
 
-    # Exit a parse tree produced by SimpleDSLParser#assignStat.
-    def exitAssignStat(self, ctx:SimpleDSLParser.AssignStatContext):
-        pass
-
-
-    # Enter a parse tree produced by SimpleDSLParser#printStat.
-    def enterPrintStat(self, ctx:SimpleDSLParser.PrintStatContext):
-        pass
-
-    # Exit a parse tree produced by SimpleDSLParser#printStat.
-    def exitPrintStat(self, ctx:SimpleDSLParser.PrintStatContext):
+    # Exit a parse tree produced by SimpleDSLParser#stat.
+    def exitStat(self, ctx:SimpleDSLParser.StatContext):
         pass
 
 
-    # Enter a parse tree produced by SimpleDSLParser#intExpr.
-    def enterIntExpr(self, ctx:SimpleDSLParser.IntExprContext):
+    # Enter a parse tree produced by SimpleDSLParser#AssignStatement.
+    def enterAssignStatement(self, ctx:SimpleDSLParser.AssignStatementContext):
         pass
 
-    # Exit a parse tree produced by SimpleDSLParser#intExpr.
-    def exitIntExpr(self, ctx:SimpleDSLParser.IntExprContext):
-        pass
-
-
-    # Enter a parse tree produced by SimpleDSLParser#addSubExpr.
-    def enterAddSubExpr(self, ctx:SimpleDSLParser.AddSubExprContext):
-        pass
-
-    # Exit a parse tree produced by SimpleDSLParser#addSubExpr.
-    def exitAddSubExpr(self, ctx:SimpleDSLParser.AddSubExprContext):
+    # Exit a parse tree produced by SimpleDSLParser#AssignStatement.
+    def exitAssignStatement(self, ctx:SimpleDSLParser.AssignStatementContext):
         pass
 
 
-    # Enter a parse tree produced by SimpleDSLParser#mulDivExpr.
+    # Enter a parse tree produced by SimpleDSLParser#PrintStatement.
+    def enterPrintStatement(self, ctx:SimpleDSLParser.PrintStatementContext):
+        pass
+
+    # Exit a parse tree produced by SimpleDSLParser#PrintStatement.
+    def exitPrintStatement(self, ctx:SimpleDSLParser.PrintStatementContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleDSLParser#MulDivExpr.
     def enterMulDivExpr(self, ctx:SimpleDSLParser.MulDivExprContext):
         pass
 
-    # Exit a parse tree produced by SimpleDSLParser#mulDivExpr.
+    # Exit a parse tree produced by SimpleDSLParser#MulDivExpr.
     def exitMulDivExpr(self, ctx:SimpleDSLParser.MulDivExprContext):
         pass
 
 
-    # Enter a parse tree produced by SimpleDSLParser#idExpr.
+    # Enter a parse tree produced by SimpleDSLParser#IdExpr.
     def enterIdExpr(self, ctx:SimpleDSLParser.IdExprContext):
         pass
 
-    # Exit a parse tree produced by SimpleDSLParser#idExpr.
+    # Exit a parse tree produced by SimpleDSLParser#IdExpr.
     def exitIdExpr(self, ctx:SimpleDSLParser.IdExprContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleDSLParser#IntExpr.
+    def enterIntExpr(self, ctx:SimpleDSLParser.IntExprContext):
+        pass
+
+    # Exit a parse tree produced by SimpleDSLParser#IntExpr.
+    def exitIntExpr(self, ctx:SimpleDSLParser.IntExprContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleDSLParser#AddSubExpr.
+    def enterAddSubExpr(self, ctx:SimpleDSLParser.AddSubExprContext):
+        pass
+
+    # Exit a parse tree produced by SimpleDSLParser#AddSubExpr.
+    def exitAddSubExpr(self, ctx:SimpleDSLParser.AddSubExprContext):
         pass
 
 

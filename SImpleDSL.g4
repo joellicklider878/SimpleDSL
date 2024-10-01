@@ -1,17 +1,23 @@
 grammar SimpleDSL;
 
-prog:   stat+ ;
+prog: stat+ ;
 
-stat:   'let' ID '=' expr ';'                # assignStat
-    |   'print' '(' expr ')' ';'             # printStat
+stat: assignStat
+    | printStat
     ;
 
-expr:   expr ('*'|'/') expr                  # mulDivExpr
-    |   expr ('+'|'-') expr                  # addSubExpr
-    |   INT                                 # intExpr
-    |   ID                                  # idExpr
+assignStat: ID '=' expr ';' # AssignStatement
+          ;
+
+printStat: 'print' expr ';' # PrintStatement
+         ;
+
+expr: expr op=('*'|'/') expr # MulDivExpr
+    | expr op=('+'|'-') expr # AddSubExpr
+    | INT                    # IntExpr
+    | ID                     # IdExpr
     ;
 
-ID  :   [a-zA-Z]+ ;
-INT :   [0-9]+ ;
-WS  :   [ \t\r\n]+ -> skip ;
+ID: [a-zA-Z]+ ;
+INT: [0-9]+ ;
+WS: [ \t\r\n]+ -> skip ;
