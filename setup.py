@@ -1,21 +1,19 @@
 from setuptools import setup, find_packages
 
-with open('README.md') as f:
-    long_description = f.read()
-    
+from pathlib import Path
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
+
 setup(
+    name='SimpleDSL',
+    version='1.0.1',
+    description='A domain-specific language for simple understanding',
     author='Joel Douglass Licklider',
     author_email='joellicklider@gmail.com',
-    description='A PyPI package with a Markdown README',
-    long_description=long_description,
-    long_description_content_type='text/markdown',
-    name='SimpleDSL',
     url='https://github.com/joellicklider878/SimpleDSL',
-    version='1.0.1',
     packages=find_packages(),
     install_requires=[
         'antlr4-python3-runtime==4.9.2',
-        # Add other dependencies here
     ],
     entry_points={
         'console_scripts': [
@@ -27,5 +25,5 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
-    python_requires='>=3.6',
-)
+    python_requires='>=3.9'
+ )
