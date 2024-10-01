@@ -1,8 +1,12 @@
 from antlr4 import *
+from src import SimpleDSLLexer
+from src import SimpleDSLParser
+from src import SimpleDSLListener
 from SimpleDSLLexer import SimpleDSLLexer
 from SimpleDSLParser import SimpleDSLParser
 from SimpleDSLListener import SimpleDSLListener
 import SimpleClass
+import sys
 
 class SimpleDSLCompiler(SimpleDSLListener):
     def __init__(self):
